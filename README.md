@@ -1,6 +1,6 @@
 # RAPTOR: A tool for systematic identification of poly A tails and 3' unmapped regions from single molecule direct RNA sequencing
 
-Raptor provides a comprehensive report of unmapped region (UMR)lengths, sequencences & composition, conserved poly A hexamer regions, nucleotide base composition, and annotation information.
+Raptor provides a comprehensive report of unmapped region (UMR)lengths, sequencences & composition, conserved poly A hexamer regions, nucleotide base composition,annotation information and a range of analysis plots.
 
 The motivation behind this tool is to fill a gap in analysis tools as there is no current tool for analyzing 3' unmapped regions from long read sequencing data. Our hopes with this project are to continue to maintain this tool, implement new useful features, and respond to feedback from the community.
 
