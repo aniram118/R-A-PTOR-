@@ -49,15 +49,15 @@ Run as follows :
 
 **Description of Output files** 
 
-3_UMR_seqs.txt - A text file containing 3' UMR sequences 
-3_UMR_tails.txt - A text file containing 3' UMR sequences and information for each read 
-3_UMR.fastq - 3' UMR sequences in fastq file format 
-3_UMR.bed - 3' UMR sequences in bed file format
-Base_composition.csv - A csv file contating individual nucleotide composition for UMRs in each read
-Hexamer_composition.csv - A csv file containing all possible hexamers and their percentage
-Top_Hexamers.pdf - A distribution plot of top 15 hexamers from the list of Hexamers detected
-UMR_analysis.cdv - A csv file containing information on UMR sequences and associated features(read coordinates, length, etc)  and annotation information
-UMR_analysis.pdf - Analysis plots of UMR sequences 
+- 3_UMR_seqs.txt - A text file containing 3' UMR sequences 
+- 3_UMR_tails.txt - A text file containing 3' UMR sequences and information for each read 
+- 3_UMR.fastq - 3' UMR sequences in fastq file format 
+- 3_UMR.bed - 3' UMR sequences in bed file format
+- Base_composition.csv - A csv file contating individual nucleotide composition for UMRs in each read
+- Hexamer_composition.csv - A csv file containing all possible hexamers and their percentage
+- Top_Hexamers.pdf - A distribution plot of top 15 hexamers from the list of Hexamers detected
+- UMR_analysis.cdv - A csv file containing information on UMR sequences and associated features(read coordinates, length, etc)  and annotation information
+- UMR_analysis.pdf - Analysis plots of UMR sequences 
 
 
 
