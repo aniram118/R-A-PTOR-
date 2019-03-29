@@ -28,7 +28,7 @@ git clone https://github.iu.edu/anigovin/RAPTOR.git
 **Flags**
 
 
- Usage : raptor.py [-i < sam file >] [-b] [-hex] [-hum]
+ Usage : raptor.py [-i < sam file >] [-b] [-hex] [-hum] [-u]
  - `-i`,`--input` Input Sam file
  - `-b`,`--bases` Generate a csv file of nucleotide composition of UMR sequences
  - `-hex`,`--hexamer` Generate a csv file and plots of Hexamer frequencies in the UMR sequences
