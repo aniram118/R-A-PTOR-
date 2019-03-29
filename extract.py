@@ -12,18 +12,18 @@ from cigar import cigar_parse
 def extract(argv):
     inputfile = argv
     outputfile = ''
-
+    filename=inputfile[:-4]
 
     ## Create placeholder for input and output files
 
     file = open(inputfile,'r')
     file1 = open(inputfile, 'r')
     # file2 = open('5_tails.txt', 'a')
-    file3 = open('3_tails.txt', 'a')
+    file3 = open('%s_3_tails.txt'%filename, 'a')
     # f3 = open('5_tail_seqs.txt', 'a')
-    f4 = open('3_tail_seqs.txt', 'a')
-    file5 = open('3_UMR.fastq', 'a')
-    file6 = open('3_UMR.bed', 'a')
+    f4 = open('%s_3_tail_seqs.txt'%filename, 'a')
+    file5 = open('%s_3_UMR.fastq'%filename, 'a')
+    file6 = open('%s_3_UMR.bed'%filename, 'a')
 
     sequences = []
     strings = []
@@ -56,6 +56,7 @@ def extract(argv):
                 strt = 0
                 end = 0
                 seql = ''.join(a1[9])
+                seql.replace('T','U')
                 qual = ''.join(a1[10])
 
                 # print(s)
@@ -71,9 +72,13 @@ def extract(argv):
                             quality.append(qual[0:][:strt])
                             m = qual[0:][:strt]
                             # print(seql[0:][:strt] + ' ' + str(strt) + ' ' + 'start')
+                            ##3' UMR info file
                             file3.write(i1[0] + ' ' + str(strt) + ' ' + seql[0:][:strt] + ' ' + chr_no + ' ' + str(start_g) + ' ' + str(cigar_parse(cigar_s, start_g)) + ' ' + '-' + '\n')
+                            ##3' UMR Sequences
                             f4.write(seql[0:][:strt] + '\n')
+                            ##3' UMR fastq file
                             file5.write('@' + i1[0] + ' ' + 'XXXX' + '\n' + seql[0:][:strt] + '\n' + '+' + '\n' + qual[0:][:strt] + '\n')
+                            ##3' UMR Bed file
                             file6.write(chr_no + '\t' + str(start_g) + '\t' + str(cigar_parse(cigar_s,start_g)) + '\t' + i1[0] + '\t' + '-' + '\n')
                     # if s[len(s) - 1] == 'S':
                         #  print('End'+' '+str(s[len(s)-2])+' '+str(s[len(s)-1]))
@@ -85,7 +90,7 @@ def extract(argv):
                             # print(seql[-end:] + ' ' + str(end) + ' ' + 'end')
                             # file2.write(i1[0] + ' ' + str(end) + ' ' + seql[-end:] + '\n')
                             # f3.write(seql[-end:] + '\n')
-                elif (i1[1]) != 16:
+                elif int(i1[1]) == 0:
                     # if s[1] == 'S':
                         #  print('Start'+' '+str(s[0]))
                         # strt = (int(s[0]))
