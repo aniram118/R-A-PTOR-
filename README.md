@@ -56,7 +56,7 @@ Run as follows :
 - Base_composition.csv - A csv file contating individual nucleotide composition for UMRs in each read
 - Hexamer_composition.csv - A csv file containing all possible hexamers and their percentage
 - Top_Hexamers.pdf - A distribution plot of top 15 hexamers from the list of Hexamers detected
-- UMR_analysis.cdv - A csv file containing information on UMR sequences and associated features(read coordinates, length, etc)  and annotation information
+- UMR_analysis.csv - A csv file containing information on UMR sequences and associated features(read coordinates, length, etc)  and annotation information
 - UMR_analysis.pdf - Analysis plots of UMR sequences 
 
 
