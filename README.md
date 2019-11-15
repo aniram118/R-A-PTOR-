@@ -64,6 +64,5 @@ Run as follows :
 **Credits**
 
 @anigovin
-@rkadumu
 
 **License**
